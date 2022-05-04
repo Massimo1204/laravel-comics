@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $comics = config('comics');
-    return view('layouts.base', ["comics" => $comics]);
+    $headerNav = config('headerNav');
+    return view('layouts.base', ["comics" => $comics, "headerNav" => $headerNav]);
 })->name('home');
