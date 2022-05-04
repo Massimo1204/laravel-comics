@@ -1,1 +1,33 @@
 //
+@import "partials/variables";
+@import "partials/common";
+
+header {
+  padding: 0.7rem;
+  div {
+    @include flexed(row, space-between, center);
+    font-weight: 600;
+    font-size: 0.9rem;
+    div {
+      img {
+        height: 80px;
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        padding: 0 0.8rem;
+        a {
+          text-decoration: none;
+          color: black;
+          padding: 38px 0;
+        }
+        a.active {
+          border-bottom: 5px solid $dc-blue;
+          color: $dc-blue;
+        }
+      }
+    }
+  }
+}
