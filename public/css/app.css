@@ -13,6 +13,10 @@
   text-transform: uppercase;
 }
 
+body {
+  color: white;
+}
+
 header {
   padding: 0.7rem;
 }
@@ -48,5 +52,84 @@ header div ul li a {
 header div ul li a.active {
   border-bottom: 5px solid rgb(2, 130, 249);
   color: rgb(2, 130, 249);
+}
+
+footer {
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+footer div div.footer-list {
+  margin-top: 1.5rem;
+}
+
+footer div div.footer-list div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+footer div div.footer-list div h3 {
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+footer div div.footer-list div ul {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+footer div div.footer-list div ul li {
+  font-size: 0.78rem;
+  line-height: 1.3rem;
+  color: rgb(148, 147, 147);
+}
+
+footer div div.dc-logo {
+  height: 370px;
+  width: 600px;
+  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer div.footer-bottom {
+  background-color: rgb(48, 48, 48);
+}
+
+footer div.footer-bottom div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+footer div.footer-bottom div div.footer-btn-wrapper button {
+  background-color: rgb(48, 48, 48);
+  border: 2px solid rgb(2, 130, 249);
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+footer div.footer-bottom div div.footer-logos {
+  color: rgb(2, 130, 249);
+}
+
+footer div.footer-bottom div div.footer-logos ul {
+  list-style: none;
+}
+
+footer div.footer-bottom div div.footer-logos ul li {
+  display: inline;
+  padding-left: 1rem;
 }
 

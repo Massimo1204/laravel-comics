@@ -1,6 +1,9 @@
 //
 @import "partials/variables";
 @import "partials/common";
+body {
+  color: white;
+}
 
 header {
   padding: 0.7rem;
@@ -26,6 +29,65 @@ header {
         a.active {
           border-bottom: 5px solid $dc-blue;
           color: $dc-blue;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-image: url("../../public/images/footer-bg.jpg");
+  div {
+    @include flexed(row, space-between, start);
+    div.footer-list {
+      margin-top: 1.5rem;
+      div {
+        @include flexed(column, start, start);
+        h3 {
+          text-transform: uppercase;
+          padding: 1rem 0;
+        }
+        ul {
+          list-style: none;
+          margin-right: 2rem;
+          li {
+            font-size: 0.78rem;
+            line-height: 1.3rem;
+            color: rgb(148, 147, 147);
+          }
+        }
+      }
+    }
+    div.dc-logo {
+      height: 370px;
+      width: 600px;
+      background-image: url("../../public/images/dc-logo-bg.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  div.footer-bottom {
+    background-color: $footer-grey;
+    div {
+      @include flexed(row, space-between, center);
+      padding: 0.5rem;
+      div.footer-btn-wrapper {
+        button {
+          background-color: $footer-grey;
+          border: 2px solid $dc-blue;
+          padding: 0.8rem 1rem;
+          font-weight: 600;
+          color: white;
+        }
+      }
+      div.footer-logos {
+        color: $dc-blue;
+        ul {
+          list-style: none;
+          li {
+            display: inline;
+            padding-left: 1rem;
+          }
         }
       }
     }
