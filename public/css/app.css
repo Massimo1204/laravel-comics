@@ -177,3 +177,24 @@ div.card-wrapper div.btn-wrapper button {
   font-weight: 600;
   color: white;
 }
+
+nav.merchNav {
+  background-color: rgb(2, 130, 249);
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav.merchNav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+nav.merchNav div img {
+  height: 50px;
+}
+nav.merchNav div h5 {
+  padding-left: 0.5rem;
+}

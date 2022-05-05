@@ -148,3 +148,18 @@ div.card-wrapper{
     }
   }
 }
+
+nav.merchNav {
+  background-color: $dc-blue;
+  height: 100px;
+  @include flexed(row, space-evenly, center);
+  div {
+    @include flexed(row, start, center);
+    img {
+      height: 50px;
+    }
+    h5 {
+      padding-left: 0.5rem;
+    }
+  }
+}

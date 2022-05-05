@@ -21,4 +21,14 @@
             <button class="text-uppercase">load more</button>
         </div>
     </div>
+    <nav class="merchNav">
+        @foreach ($merchNav as $index => $item)
+            <div>
+                <img src="{{asset('images/'.$item['imgSrc'])}}" alt="{{$item['title']}}"/>
+                <h5 class="text-uppercase">{{ $item['title'] }}</h5>
+            </div>
+        @endforeach
+        
+    </nav>
+    
 @endsection
