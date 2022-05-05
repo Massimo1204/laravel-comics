@@ -17,10 +17,13 @@ body {
   color: white;
 }
 
+main {
+  background: rgb(28, 28, 28);
+}
+
 header {
   padding: 0.7rem;
 }
-
 header div {
   display: flex;
   flex-direction: row;
@@ -29,81 +32,67 @@ header div {
   font-weight: 600;
   font-size: 0.9rem;
 }
-
 header div div img {
   height: 80px;
 }
-
 header div ul {
   list-style: none;
 }
-
 header div ul li {
   display: inline;
   padding: 0 0.8rem;
 }
-
 header div ul li a {
   text-decoration: none;
   color: black;
   padding: 38px 0;
 }
-
 header div ul li a.active {
   border-bottom: 5px solid rgb(2, 130, 249);
   color: rgb(2, 130, 249);
 }
 
 footer {
-  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background: url("/images/footer-bg.jpg");
 }
-
 footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
 }
-
 footer div div.footer-list {
   margin-top: 1.5rem;
 }
-
 footer div div.footer-list div {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
 }
-
 footer div div.footer-list div h3 {
   text-transform: uppercase;
   padding: 1rem 0;
 }
-
 footer div div.footer-list div ul {
   list-style: none;
   margin-right: 2rem;
 }
-
 footer div div.footer-list div ul li {
   font-size: 0.78rem;
   line-height: 1.3rem;
   color: rgb(148, 147, 147);
 }
-
 footer div div.dc-logo {
   height: 370px;
   width: 600px;
-  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background: url("/images/dc-logo-bg.png");
   background-position: center;
   background-repeat: no-repeat;
 }
-
 footer div.footer-bottom {
   background-color: rgb(48, 48, 48);
 }
-
 footer div.footer-bottom div {
   display: flex;
   flex-direction: row;
@@ -111,7 +100,6 @@ footer div.footer-bottom div {
   align-items: center;
   padding: 0.5rem;
 }
-
 footer div.footer-bottom div div.footer-btn-wrapper button {
   background-color: rgb(48, 48, 48);
   border: 2px solid rgb(2, 130, 249);
@@ -119,17 +107,73 @@ footer div.footer-bottom div div.footer-btn-wrapper button {
   font-weight: 600;
   color: white;
 }
-
 footer div.footer-bottom div div.footer-logos {
   color: rgb(2, 130, 249);
 }
-
 footer div.footer-bottom div div.footer-logos ul {
   list-style: none;
 }
-
 footer div.footer-bottom div div.footer-logos ul li {
   display: inline;
   padding-left: 1rem;
 }
 
+div.my-jumbo {
+  position: relative;
+  height: 500px;
+  background: url("/images/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.my-jumbo div.abs-text {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  transform: translateY(-50%);
+  background-color: rgb(2, 130, 249);
+  padding: 0.8rem 2.5rem;
+}
+
+div.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.3rem 0 0.8rem 0;
+}
+div.card-wrapper div.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: calc(16.6666666667% - 2.3rem);
+  height: 350px;
+  margin: 0 1.15rem;
+}
+div.card-wrapper div.card a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+div.card-wrapper div.card a div.img-wrapper {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+div.card-wrapper div.card a div.img-wrapper img {
+  width: 100%;
+}
+div.card-wrapper div.card a h3 {
+  padding-top: 1.5rem;
+  color: white;
+}
+div.card-wrapper div.btn-wrapper {
+  margin-top: 2rem;
+}
+div.card-wrapper div.btn-wrapper button {
+  padding: 0.8rem 3.5rem;
+  background-color: rgb(2, 130, 249);
+  font-weight: 600;
+  color: white;
+}

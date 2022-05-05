@@ -4,6 +4,9 @@
 body {
   color: white;
 }
+main{
+  background: $dark-grey;
+}
 
 header {
   padding: 0.7rem;
@@ -36,7 +39,7 @@ header {
 }
 
 footer {
-  background-image: url("../../public/images/footer-bg.jpg");
+  background: url("/images/footer-bg.jpg");
   div {
     @include flexed(row, space-between, start);
     div.footer-list {
@@ -61,7 +64,7 @@ footer {
     div.dc-logo {
       height: 370px;
       width: 600px;
-      background-image: url("../../public/images/dc-logo-bg.png");
+      background: url("/images/dc-logo-bg.png");
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -90,6 +93,58 @@ footer {
           }
         }
       }
+    }
+  }
+}
+div.my-jumbo {
+  position: relative;
+  height: 500px;
+  background: url("/images/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  div.abs-text {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: $dc-blue;
+    padding: 0.8rem 2.5rem;
+  }
+}
+div.card-wrapper{
+  @include flexed(row, center, center);
+  flex-wrap: wrap;
+  padding: 1.3rem 0 0.8rem 0;
+  div.card {
+    @include flexed(column, center, start);
+    width: calc((100% / 6) - 2.3rem);
+    height: 350px;
+    margin: 0 1.15rem;
+    a {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      div.img-wrapper {
+        height: 250px;
+        width: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      h3 {
+        padding-top: 1.5rem;
+        color: white;
+      }
+    }
+  }
+  div.btn-wrapper {
+    margin-top: 2rem;
+    button {
+      padding: 0.8rem 3.5rem;
+      background-color: $dc-blue;
+      font-weight: 600;
+      color: white;
     }
   }
 }
