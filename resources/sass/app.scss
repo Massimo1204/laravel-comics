@@ -1,8 +1,10 @@
 //
 @import "partials/variables";
 @import "partials/common";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body {
   color: white;
+  font-family: 'League Spartan', sans-serif;
 }
 main{
   background: $dark-grey;
@@ -27,7 +29,7 @@ header {
         a {
           text-decoration: none;
           color: black;
-          padding: 38px 0;
+          padding: 39px 0;
         }
         a.active {
           border-bottom: 5px solid $dc-blue;
@@ -90,6 +92,9 @@ footer {
           li {
             display: inline;
             padding-left: 1rem;
+            a{
+              text-decoration: none;
+            }
           }
         }
       }
@@ -97,57 +102,61 @@ footer {
   }
 }
 div.my-jumbo {
-  position: relative;
   height: 500px;
   background: url("/images/jumbotron.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+div.content-wrapper{
+position: relative;
   div.abs-text {
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 10%;
     transform: translateY(-50%);
     background-color: $dc-blue;
     padding: 0.8rem 2.5rem;
   }
-}
-div.card-wrapper{
-  @include flexed(row, center, center);
-  flex-wrap: wrap;
-  padding: 1.3rem 0 0.8rem 0;
-  div.card {
-    @include flexed(column, center, start);
-    width: calc((100% / 6) - 2.3rem);
-    height: 350px;
-    margin: 0 1.15rem;
-    a {
-      text-decoration: none;
-      width: 100%;
-      height: 100%;
-      div.img-wrapper {
-        height: 250px;
+  div.card-wrapper{
+    @include flexed(row, center, center);
+    flex-wrap: wrap;
+    padding: 4rem 0 0.8rem 0;
+    div.card {
+      @include flexed(column, center, start);
+      width: calc((100% / 6) - 2.3rem);
+      height: 350px;
+      margin: 0 1.15rem;
+      a {
+        text-decoration: none;
         width: 100%;
-        overflow: hidden;
-        img {
+        height: 100%;
+        div.img-wrapper {
+          height: 250px;
           width: 100%;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        h3 {
+          padding-top: 1.5rem;
+          color: white;
         }
       }
-      h3 {
-        padding-top: 1.5rem;
+    }
+    div.btn-wrapper {
+      margin-top: 2rem;
+      button {
+        padding: 0.8rem 3.5rem;
+        background-color: $dc-blue;
+        font-weight: 600;
         color: white;
       }
     }
   }
-  div.btn-wrapper {
-    margin-top: 2rem;
-    button {
-      padding: 0.8rem 3.5rem;
-      background-color: $dc-blue;
-      font-weight: 600;
-      color: white;
-    }
-  }
 }
+
 
 nav.merchNav {
   background-color: $dc-blue;
@@ -160,6 +169,54 @@ nav.merchNav {
     }
     h5 {
       padding-left: 0.5rem;
+    }
+  }
+}
+
+div.comic-wrapper{
+  div.comic-img-wrapper{
+    position: relative;
+    height: 80px;
+    background-color: $dc-blue;
+    img {
+      position: absolute;
+      bottom: 25%;
+      left: 19.7%;
+      border: 1px solid white;
+    }
+  }
+  div.comic-details-outer-wrapper{
+    padding: 80px 0;
+    background-color: white;
+    div.comic-details-inner-wrapper{
+      @include flexed(row, space-between, center);
+      div.comic-details{
+        margin-right: 50px;
+        h1.comic-title{
+          font-size: 2.5rem;
+          color: rgb(0, 63, 94);
+          margin-bottom: 30px;
+        }
+        div.comic-price{
+          @include flexed(row, space-between, center);
+          background-color: rgb(85, 186, 89);
+          color: white;
+          margin-bottom: 25px;
+          div.comic-price-inner{
+            @include flexed(row, space-between, center);
+            padding: 15px 25px;
+            .text-green-faded{
+              color: rgb(173, 247, 139);
+              font-weight: bold;
+            }
+          }
+        }
+        p.comic-description{
+          color: black;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+        }
+      }
     }
   }
 }

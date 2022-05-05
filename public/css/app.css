@@ -1,4 +1,4 @@
-* {
+@import url(https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap);* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -9,12 +9,22 @@
   margin: auto;
 }
 
+.wp-75 {
+  width: 75%;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
 
+.w-60 {
+  width: 60vw;
+  margin: auto;
+}
+
 body {
   color: white;
+  font-family: "League Spartan", sans-serif;
 }
 
 main {
@@ -45,7 +55,7 @@ header div ul li {
 header div ul li a {
   text-decoration: none;
   color: black;
-  padding: 38px 0;
+  padding: 39px 0;
 }
 header div ul li a.active {
   border-bottom: 5px solid rgb(2, 130, 249);
@@ -117,32 +127,37 @@ footer div.footer-bottom div div.footer-logos ul li {
   display: inline;
   padding-left: 1rem;
 }
+footer div.footer-bottom div div.footer-logos ul li a {
+  text-decoration: none;
+}
 
 div.my-jumbo {
-  position: relative;
   height: 500px;
   background: url("/images/jumbotron.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-div.my-jumbo div.abs-text {
+
+div.content-wrapper {
+  position: relative;
+}
+div.content-wrapper div.abs-text {
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 10%;
   transform: translateY(-50%);
   background-color: rgb(2, 130, 249);
   padding: 0.8rem 2.5rem;
 }
-
-div.card-wrapper {
+div.content-wrapper div.card-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.3rem 0 0.8rem 0;
+  padding: 4rem 0 0.8rem 0;
 }
-div.card-wrapper div.card {
+div.content-wrapper div.card-wrapper div.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,27 +166,27 @@ div.card-wrapper div.card {
   height: 350px;
   margin: 0 1.15rem;
 }
-div.card-wrapper div.card a {
+div.content-wrapper div.card-wrapper div.card a {
   text-decoration: none;
   width: 100%;
   height: 100%;
 }
-div.card-wrapper div.card a div.img-wrapper {
+div.content-wrapper div.card-wrapper div.card a div.img-wrapper {
   height: 250px;
   width: 100%;
   overflow: hidden;
 }
-div.card-wrapper div.card a div.img-wrapper img {
+div.content-wrapper div.card-wrapper div.card a div.img-wrapper img {
   width: 100%;
 }
-div.card-wrapper div.card a h3 {
+div.content-wrapper div.card-wrapper div.card a h3 {
   padding-top: 1.5rem;
   color: white;
 }
-div.card-wrapper div.btn-wrapper {
+div.content-wrapper div.card-wrapper div.btn-wrapper {
   margin-top: 2rem;
 }
-div.card-wrapper div.btn-wrapper button {
+div.content-wrapper div.card-wrapper div.btn-wrapper button {
   padding: 0.8rem 3.5rem;
   background-color: rgb(2, 130, 249);
   font-weight: 600;
@@ -197,4 +212,59 @@ nav.merchNav div img {
 }
 nav.merchNav div h5 {
   padding-left: 0.5rem;
+}
+
+div.comic-wrapper div.comic-img-wrapper {
+  position: relative;
+  height: 80px;
+  background-color: rgb(2, 130, 249);
+}
+div.comic-wrapper div.comic-img-wrapper img {
+  position: absolute;
+  bottom: 25%;
+  left: 19.7%;
+  border: 1px solid white;
+}
+div.comic-wrapper div.comic-details-outer-wrapper {
+  padding: 80px 0;
+  background-color: white;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details {
+  margin-right: 50px;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details h1.comic-title {
+  font-size: 2.5rem;
+  color: rgb(0, 63, 94);
+  margin-bottom: 30px;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details div.comic-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(85, 186, 89);
+  color: white;
+  margin-bottom: 25px;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details div.comic-price div.comic-price-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details div.comic-price div.comic-price-inner .text-green-faded {
+  color: rgb(173, 247, 139);
+  font-weight: bold;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details p.comic-description {
+  color: black;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }

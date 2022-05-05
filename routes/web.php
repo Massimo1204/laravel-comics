@@ -19,6 +19,14 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
     $comics = config('comics');
-    $merchNav = config('merchNav');
-        return view('guest.comics', ["comics" => $comics , "merchNav" => $merchNav]);
+        return view('guest.comics', ["comics" => $comics , "merchNav" => config('merchNav')]);
+})->name('comics');
+
+Route::get('/comics/{id}', function ($id) {
+    $comics = config('comics');
+    if(is_numeric($id) && $id >= 0 && $id < count($comics)){
+        return view('guest.comic-details', ["comic" => $comics[$id] , "merchNav" => config('merchNav')]);
+    }else {
+        abort(404);
+    }
 })->name('comics');
