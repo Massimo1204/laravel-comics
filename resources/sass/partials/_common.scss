@@ -13,6 +13,10 @@
     width: 75%;
 }
 
+.wp-50{
+    width: 50%;
+}
+
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -21,7 +25,6 @@
     width: 60vw;
     margin: auto;
 }
-
 
 @mixin flexed($direction, $content, $items){
     display: flex;

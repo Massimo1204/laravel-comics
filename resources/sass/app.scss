@@ -194,7 +194,7 @@ div.comic-wrapper{
         margin-right: 50px;
         h1.comic-title{
           font-size: 2.5rem;
-          color: rgb(0, 63, 94);
+          color: $comic-title-blue;
           margin-bottom: 30px;
         }
         div.comic-price{
@@ -215,6 +215,86 @@ div.comic-wrapper{
           color: black;
           font-size: 1.2rem;
           line-height: 1.5rem;
+        }
+      }
+    }
+  }
+  div.comic-bottom-details{
+    background-color: rgb(246, 246, 246);
+    color: black;
+    border-top: 1px solid rgb(221, 218, 218);
+    div.comic-bottom-inner{
+      padding: 30px 0 100px 0;
+      @include flexed(row, space-between, start);
+      div.talent,
+      div.specs {
+        width: 48%;
+        div,
+        h2{
+          border-bottom: 1px solid rgb(221, 218, 218);
+        }
+        div {
+          padding: 12px 0 8px 0;
+        }
+      }
+      div.talent{
+        div{
+          @include flexed(row, space-between, start);
+          p.comic-blue{
+            width: 70%;
+          }
+        }
+      }
+      div.specs{
+        div{
+          @include flexed(row, start, start);
+          .comic-subtitle{
+            width: 35%;
+          }
+        }
+      }
+      .comic-subtitle{
+        color: $comic-title-blue;
+      }
+      .comic-blue{
+        color: rgb(19, 171, 212);
+      }
+    }
+    div.comic-merch{
+      border-top: 1px solid rgb(221, 218, 218);
+      div.comic-merch-inner{
+        @include flexed(row, start, start);
+        height: 90px;
+        border-left: 1px solid rgb(221, 218, 218);
+        div.single-comic-merch{
+          @include flexed(row, space-between, start);
+          width: 25%;
+          padding: 20px;
+          color: rgb(161, 158, 158);
+          font-weight: 600;
+          border-right: 1px solid rgb(221, 218, 218);
+          div.comic-icon{
+            background: url("/images/cta-icons.png");
+            background-repeat: no-repeat;
+            background-size: 400%;
+            height: 49px;
+            width: 50px;
+          }
+        }
+        div.single-comic-merch:nth-child(2){
+          div.comic-icon{
+            background-position-x: 100%;
+          }
+        }
+        div.single-comic-merch:nth-child(3){
+          div.comic-icon{
+            background-position-x: 67%;
+          }
+        }
+        div.single-comic-merch:nth-child(4){
+          div.comic-icon{
+            background-position-x: 33%;
+          }
         }
       }
     }

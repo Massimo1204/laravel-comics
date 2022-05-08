@@ -44,49 +44,62 @@
                 </div>
             </div>
         </div>
-        <div class="comic-bottom-details w-60">
-            <div class="talent">
-                <h2 class="comic-subtitle">Talent</h2>
-                <div>
-                    <p class="detail-title">Art by:</p>
-                    <p class="comic-blue">
-                        @foreach ($comic['artists'] as $artist)
-                            {{$artist}}
-                        @endforeach
-                    </p>
-                </div>
-                <div>
-                    <p class="detail-title">Written by:</p>
-                    <p class="comic-blue">
-                        @foreach ($comic['writers'] as $writer)
-                            {{$writer}}
-                        @endforeach
-                    </p>
-                </div>
-            </div>
-            <div class="specs">
-                <div>
-                    <p class="detail-title">Series:</p>
-                    <p class="comic-blue">{{$comic['series']}}</p>
-                </div>
-                <div>
-                    <p class="detail-title">U.S Price:</p>
-                    <p>{{$comic['price']}}</p>
-                </div>
-                <div>
-                    <p class="detail-title">On Sale Date:</p>
-                    <p>{{$comic['sale_date']}}</p>
-                </div>
-            </div>
-            <div class="comic-merch-nav">
-                @foreach ($merchNav as $item)
+        <div class="comic-bottom-details">
+            <div class="comic-bottom-inner w-60">
+                <div class="talent">
+                    <h2 class="comic-subtitle">Talent</h2>
                     <div>
-                        <p>
-                            {{$item['title']}}
+                        <p class="comic-subtitle">Art by:</p>
+                        <p class="comic-blue">
+                            @foreach ($comic['artists'] as $artist)
+                                {{$artist}}
+                            @endforeach
                         </p>
-                        <img src="{{asset('images/'.$item['imgSrc'])}}" alt="{{$item['title']}}">
                     </div>
-                @endforeach
+                    <div>
+                        <p class="comic-subtitle">Written by:</p>
+                        <p class="comic-blue">
+                            @foreach ($comic['writers'] as $writer)
+                                {{$writer}}
+                            @endforeach
+                        </p>
+                    </div>
+                </div>
+                <div class="specs">
+                    <h2 class="comic-subtitle">Specs</h2>
+                    <div>
+                        <p class="comic-subtitle">Series:</p>
+                        <p class="comic-blue text-uppercase">{{$comic['series']}}</p>
+                    </div>
+                    <div>
+                        <p class="comic-subtitle">U.S Price:</p>
+                        <p>{{$comic['price']}}</p>
+                    </div>
+                    <div>
+                        <p class="comic-subtitle">On Sale Date:</p>
+                        <p>{{$comic['sale_date']}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comic-merch">
+                <div class="comic-merch-inner w-60">
+                    <div class="single-comic-merch">
+                        <p class="text-uppercase">digital comics</p>
+                        <div class="comic-icon"></div>
+                    </div>
+                    <div class="single-comic-merch">
+                        <p class="text-uppercase">shop dc</p>
+                        <div class="comic-icon"></div>
+                    </div>
+                    <div class="single-comic-merch">
+                        <p class="text-uppercase">comic shop locator</p>
+                        <div class="comic-icon"></div>
+                    </div>
+                    <div class="single-comic-merch">
+                        <p class="text-uppercase">subscriptions</p>
+                        <div class="comic-icon"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
