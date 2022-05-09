@@ -12,7 +12,7 @@
         <div class="w-80 card-wrapper">
             @foreach ($comics as $index => $comic)
                 <div class="card">
-                    <a href="#">
+                    <a href="{{ route('comic-details', ['id' => $index])}}">
                         <div class="img-wrapper">
                             <img src="{{$comic['thumb']}}" alt="{{$comic['type']}}" />
                         </div>

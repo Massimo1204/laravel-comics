@@ -40,6 +40,9 @@
                     </p>
                 </div>
                 <div class="ad-wrapper">
+                    <p class="ad-text text-uppercase">
+                        advertisement
+                    </p>
                     <img src="{{asset("images/adv.jpg")}}" alt="">
                 </div>
             </div>

@@ -7,8 +7,8 @@
           <ul>
             @foreach ($headerNav as $item)
               <li>
-                <a href="#" class="{{ $item["state"] ? 'active' : ''}}">
-                  {{$item["text"]}}
+                <a href="{{route('comics' , ['page' => $item['url']])}}" class="{{ Route::currentRouteName() == $item['url'] ? 'active' : ''}}">
+                  {{ $item["text"] }}
                 </a>
               </li>  
             @endforeach

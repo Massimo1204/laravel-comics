@@ -159,7 +159,7 @@ div.content-wrapper div.card-wrapper {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 4rem 0 0.8rem 0;
+  padding: 4rem 0 1.5rem 0;
 }
 div.content-wrapper div.card-wrapper div.card {
   display: flex;
@@ -195,6 +195,7 @@ div.content-wrapper div.card-wrapper div.btn-wrapper button {
   background-color: rgb(2, 130, 249);
   font-weight: 600;
   color: white;
+  border: none;
 }
 
 nav.merchNav {
@@ -238,6 +239,7 @@ div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrappe
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: rgb(73, 72, 72);
 }
 div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.comic-details {
   margin-right: 50px;
@@ -271,6 +273,10 @@ div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrappe
   color: black;
   font-size: 1.2rem;
   line-height: 1.5rem;
+}
+div.comic-wrapper div.comic-details-outer-wrapper div.comic-details-inner-wrapper div.ad-wrapper p.ad-text {
+  text-align: end;
+  font-weight: 600;
 }
 div.comic-wrapper div.comic-bottom-details {
   background-color: rgb(246, 246, 246);
